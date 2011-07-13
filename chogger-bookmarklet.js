@@ -6,7 +6,7 @@
 	---------------------------------------------------------------------
 	# only firefox supports document.contentType for determining mime type.  So for every other browser we need to depend
 	  upon the extension in the url, which is less than ideal.  We need this to know if I need to redirect to chogger without modifying the DOM
-	# IE is a steamy sack of crap.  It required the following changes:
+	# IE required the following changes:
 		- added onreadystatechange instead of using onload.  Script tags were inconsistent with what state they returned when done ('loaded' vs 'complete')
 		- for some reason IE doesnt respent styles added via dom manipulation, unless the style tag is at the very bottom 
 		- position: fixed won't work in ie6 (on your own there), and only works in ie7&8 if the doc type is correct (see html example).  I will try to detect and add if needed
